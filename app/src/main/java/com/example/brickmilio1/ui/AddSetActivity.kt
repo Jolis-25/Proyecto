@@ -1,7 +1,9 @@
 package com.example.brickmilio1.ui
 
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -15,7 +17,7 @@ class AddSetActivity : AppCompatActivity() {
     private lateinit var viewModel: LegoSetViewModel
     private lateinit var etNombre: TextInputEditText
     private lateinit var etPiezas: TextInputEditText
-    private lateinit var etCategoria: TextInputEditText
+    private lateinit var spinnerCategoria: Spinner
     private lateinit var btnGuardar: Button
     private lateinit var btnCancelar: Button
 
@@ -29,16 +31,21 @@ class AddSetActivity : AppCompatActivity() {
 
         etNombre = findViewById(R.id.etNombreSet)
         etPiezas = findViewById(R.id.etPiezas)
-        etCategoria = findViewById(R.id.etCategoria)
+        spinnerCategoria = findViewById(R.id.spinnerCategoria)
         btnGuardar = findViewById(R.id.btnGuardar)
         btnCancelar = findViewById(R.id.btnCancelar)
+
+        val categorias = resources.getStringArray(R.array.categorias_lego)
+        val adapterSpinner = ArrayAdapter(this, android.R.layout.simple_spinner_item, categorias)
+        adapterSpinner.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinnerCategoria.adapter = adapterSpinner
 
         btnGuardar.setOnClickListener {
             val nombre = etNombre.text.toString().trim()
             val piezasStr = etPiezas.text.toString().trim()
-            val categoria = etCategoria.text.toString().trim()
+            val categoria = spinnerCategoria.selectedItem.toString()
 
-            if (nombre.isEmpty() || piezasStr.isEmpty() || categoria.isEmpty()) {
+            if (nombre.isEmpty() || piezasStr.isEmpty()) {
                 Toast.makeText(this, "Completa todos los campos", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }

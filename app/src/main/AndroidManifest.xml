@@ -13,14 +13,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BrickMilio1"
         tools:targetApi="31">
+
         <activity
-            android:name="com.example.brickmilio1.MainActivity"
+            android:name="com.example.brickmilio1.ui.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.example.brickmilio1.ui.RegistroActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name="com.example.brickmilio1.MainActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name="com.example.brickmilio1.ui.AddSetActivity"
+            android:exported="false"/>
+
     </application>
 
 </manifest>

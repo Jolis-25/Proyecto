@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+
         viewPager.adapter = adapter
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->

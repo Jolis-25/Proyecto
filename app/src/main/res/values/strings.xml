@@ -1,3 +1,32 @@
 <resources>
-    <string name="app_name">BrickMilio1</string>
+    <string name="app_name">BrickMilio</string>
+
+    <!-- Login -->
+    <string name="titulo_app">BrickMilio</string>
+    <string name="subtitulo_login">Tu colección LEGO personal</string>
+    <string name="hint_email">Correo electrónico</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="btn_login">Iniciar sesión</string>
+    <string name="tv_no_cuenta">¿No tienes cuenta?</string>
+    <string name="tv_ir_registro">Regístrate</string>
+
+    <!-- Registro -->
+    <string name="subtitulo_registro">Crear cuenta nueva</string>
+    <string name="hint_nombre">Nombre</string>
+    <string name="btn_registro">Crear cuenta</string>
+    <string name="tv_ya_cuenta">¿Ya tienes cuenta?</string>
+    <string name="tv_ir_login">Inicia sesión</string>
+
+    <!-- Estados -->
+    <string name="estado_armado">armado</string>
+    <string name="estado_por_armar">por_armar</string>
+    <string name="estado_wishlist">wishlist</string>
+
+    <!-- Agregar set -->
+    <string name="hint_nombre_set">Nombre del set</string>
+    <string name="hint_piezas">Número de piezas</string>
+    <string name="hint_categoria">Categoría</string>
+    <string name="btn_guardar">Guardar</string>
+    <string name="btn_cancelar">Cancelar</string>
+    <string name="tiempo_estimado">Tiempo estimado</string>
 </resources>

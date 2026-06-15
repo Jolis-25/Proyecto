@@ -19,10 +19,10 @@ class LegoSetRepository(private val dao: LegoSetDao) {
     suspend fun eliminar(legoSet: LegoSet) = dao.eliminar(legoSet)
 
     fun calcularTiempoMin(piezas: Int): Int {
-        return if (piezas >= 1000) {
-            piezas * 2
-        } else {
-            (piezas * 1.5).toInt()
+        return when {
+            piezas <= 500 -> (piezas * 0.5).toInt()
+            piezas <= 1000 -> piezas * 1
+            else -> (piezas * 1.5).toInt()
         }
     }
 

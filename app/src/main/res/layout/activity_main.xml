@@ -6,11 +6,40 @@
     android:orientation="vertical"
     android:background="@color/lego_amarillo">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/lego_rojo"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/titulo_app"
+            android:textColor="@color/blanco"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"/>
+
+        <Button
+            android:id="@+id/btnCerrarSesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salir"
+            android:textColor="@color/lego_rojo"
+            android:backgroundTint="@color/blanco"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/lego_rojo"
+        android:background="@color/lego_negro"
         app:tabTextColor="@color/blanco"
         app:tabSelectedTextColor="@color/lego_amarillo"
         app:tabIndicatorColor="@color/lego_amarillo"/>

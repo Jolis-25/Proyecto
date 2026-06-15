@@ -3,6 +3,7 @@ package com.example.brickmilio1
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         val viewPager = findViewById<ViewPager2>(R.id.viewPager)
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
+        val btnCerrarSesion = findViewById<Button>(R.id.btnCerrarSesion)
 
         val adapter = object : FragmentStateAdapter(this) {
             override fun getItemCount() = 3
@@ -47,7 +49,11 @@ class MainActivity : AppCompatActivity() {
                 else -> "⭐ Wishlist"
             }
         }.attach()
+
+        btnCerrarSesion.setOnClickListener {
+            sharedPreferences.edit().putBoolean("sesion_activa", false).apply()
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+        }
     }
-
-
 }

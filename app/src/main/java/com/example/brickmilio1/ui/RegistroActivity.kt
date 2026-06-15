@@ -44,8 +44,18 @@ class RegistroActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+            if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                Toast.makeText(this, "Ingresa un correo válido", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
             if (password.length < 6) {
                 Toast.makeText(this, "La contraseña debe tener al menos 6 caracteres", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            if (!password.any { it.isDigit() }) {
+                Toast.makeText(this, "La contraseña debe tener al menos un número", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 

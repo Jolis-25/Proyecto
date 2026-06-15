@@ -29,4 +29,17 @@
     <string name="btn_guardar">Guardar</string>
     <string name="btn_cancelar">Cancelar</string>
     <string name="tiempo_estimado">Tiempo estimado</string>
+
+    <string-array name="categorias_lego">
+        <item>City</item>
+        <item>Technic</item>
+        <item>Star Wars</item>
+        <item>Harry Potter</item>
+        <item>Marvel</item>
+        <item>Architecture</item>
+        <item>Ideas</item>
+        <item>Creator</item>
+        <item>Minecraft</item>
+        <item>Speed Champions</item>
+    </string-array>
 </resources>
